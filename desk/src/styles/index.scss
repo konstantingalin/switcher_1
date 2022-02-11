@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+// переменные
+// var(--color-blue); - пример для использования
+
+:root {
+    --color-white: #fff;
+    --color-violet: #4c328c;
+    --color-pink: #dc4c94;
+    --color-blue: #10069F;
+    --main-font: 'Montserrat', sans-serif; // шрифт по умолчанию
+    --main-color: #2c2c2c; // цвет по умолчанию
+    --main-font-size: 16px; // размер шрифта по умолчанию
+    --color-grey: #a6a6a6;
+    --color-orange: #FF7500;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.plus_button {
+    display: none;
+    background: var(--color-orange);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 12px 20px;
+    border-radius: 24px;
+    //max-width: 137px;
+    margin: 0 auto 0;
+}
+
+html {
+    background-color: var(--color-white);
+}
+.wrapper {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    // -webkit-overflow-scrolling: touch;
+    background: var(--color-white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+body {
+    font-family: var(--main-font), sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--main-font-size);
+    color: var(--main-color);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+.mob-scroll {
+    overflow-x: scroll;
+}
+
+.section {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0 16px;
+
+    &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+._1 {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #42A5F5;
+    color: #fff;
+
+    .checkbox {
+        visibility: hidden;
+      }
+
+      .checkbox-group {
+        position: relative;
+        width: 80px;
+        height: 30px;
+        background-color: #333;
+        border-radius: 50px;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+      }
+
+      .checkbox-group:after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        height: 2px;
+        width: 52px;
+        background-color: #111;
+        border-radius: 50px;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+      }
+
+      .checkbox-label {
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 4px;
+        z-index: 1;
+        left: 4px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+
+      .checkbox-label:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #333;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 0px rgba(255, 255, 255, 0.8);
+      }
+
+      .checkbox:checked + .checkbox-label {
+        left: 54px;
+      }
+      
+      .checkbox:checked + .checkbox-label:after {
+        background-color: #27ae60;
+      }
+      
+}
+
+
+@media (max-width: 768px) {
+    
+}
